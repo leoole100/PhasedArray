@@ -3,7 +3,7 @@
 This project is developing a Phased Array for the localisation of an ROV.\
 It ultrasonic (40kHz) transducers like [here](https://www.aliexpress.com/item/32294219722.html?gatewayAdapt=glo2deu&spm=a2g0o.9042311.0.0.51394c4dT7BWEK).
 
-# Simulation
+## Simulation
 
 Mathematica simulations can be found in the [sim](./sim/) directory.
 
@@ -11,7 +11,7 @@ The [2D](./sim/2D/) and [3D](./sim/3D/) directories contain full **FEM** (finite
 Phaseguides were examined to narrow the aperture of the transducers to put them closer together.\
 The 3D code wasn't efficient enough to continue with full 3D simulations.
 
-## Array geometry
+### Array geometry
 
 In this section ([ArrayGeometries.nb](./sim/ArrayGeometries.nb), [results/](./sim/res/air/)) different Array geometries are tested in air (c = 343m/s) and a at frequency of 40kHz. The phaseshifts are selected to steer the main beam to 30° to the right.\
 On the left the positions of the transducers are shown. These have a minimum spacing of 15 mm or 1.3 &lambda;. The main lobe and strongest side lobe are marked by a black dot. The "*Main Lobe*"-Measurement in dbi denotes the directivity while the "*Side Lobe*" in db denotes the difference between the main and side lobe levels.\
