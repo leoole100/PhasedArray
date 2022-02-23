@@ -38,6 +38,5 @@ The results of a couple Tests:
 | [spiral E=1](./sim/res/air/1.0Spiral12.png)  | 12 | 11 dbi  | -6 dbi|
 | [spiral E=1](./sim/res/air/1.0Spiral16.png)  | 16 | 12 dbi  | -5 dbi|
 | [spiral E=1](./sim/res/air/1.0Spiral32.png)  | 32 | 15 dbi  | -10 dbi|
-| [spiral E=1 symetric](./sim/res/air/1.0Spiral2Sym16.png)  | 16 | 12 dbi  | -4 dbi|
-| [spiral E=1 symetric](./sim/res/air/1.0Spiral2Sym32.png)  | 32 | 15 dbi  | -10 dbi|
-
+| [spiral E=1 symmetric](./sim/res/air/1.0Spiral2Sym16.png)  | 16 | 12 dbi  | -4 dbi|
+| [spiral E=1 symmetric](./sim/res/air/1.0Spiral2Sym32.png)  | 32 | 15 dbi  | -10 dbi|
