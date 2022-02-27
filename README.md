@@ -1,8 +1,10 @@
 # Phased Array
 
-This project is developing a phased array using cheap (0.80€) ultrasonic (40kHz) transducers like [here](https://www.aliexpress.com/item/32294219722.html?gatewayAdapt=glo2deu&spm=a2g0o.9042311.0.0.51394c4dT7BWEK).
-The main problem is the size with 1.3 &lambda; in air which is over the rule of thumb wit 0.5 &lambda;.\
-At first the development of 3D printed Waveguides 
+This project is developing a phased array using cheap (0.80€) ultrasonic (40kHz) transducers like [here](https://www.aliexpress.com/item/32294219722.html?gatewayAdapt=glo2deu&spm=a2g0o.9042311.0.0.51394c4dT7BWEK).\
+The main problem is the diameter of the transducers with 1.3 &lambda; in air which is over the rule of thumb for the maximal distance between elements with 0.5 &lambda;.\
+First 3D printed waveguides were researched to get the emitting apertures closer.\
+This causes a large loss of power which isn't feasible.\
+Therefore sparse spiral array patterns are currently researched, showing promising results.
 
 ## Motivation: Localisation of an ROV
 
