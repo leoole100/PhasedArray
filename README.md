@@ -55,7 +55,7 @@ To reduce the distance between the elements 3D printed waveguides can be used. T
 For researching different waveguide shapes [2D](./sim/2D/) and [3D](./sim/3D/) FEM (finite element method) simulations of the pressure field around the transducers were evaluated.\
 The following image shows a plot of the data from a simple 2D [simulation](./sim/2D/single_transducer.nb).
 
-![pressure field around waveguide](/sim/res/femExample.png)
+![pressure field around waveguide](./sim/res/femExample.png)
 
 The problem is the intensity reduction of around 15 db.
 

@@ -1,20 +1,29 @@
 #include <Arduino.h>
+String input;
 
 void setup() {
-  ledcSetup(0,40000, 8);
-  ledcAttachPin(16, 0);
-  ledcWrite(0,128);
+	Serial.begin(115200);
+	Serial.println("");
+	Serial.println("Leon Oleschko 2022");
+	Serial.println("");
+	Serial.println("input frequency in kHz and hit enter");
+
+	ledcSetup(0,40000, 8);
+	ledcAttachPin(27, 0);
+	ledcWrite(0,128);
 }
 
 void loop() {
-	for (size_t i = 0; i < 128; i++){
-		  ledcWrite(0,i);
-		  delayMicroseconds(10);
+	if(Serial.available() > 0){
+		char data = Serial.read();
+		Serial.print(data);
+		input += data;
+		if(data =='\n'){
+			double freq = input.toDouble();
+			ledcSetup(0, 
+			freq *1000, 8);
+			ledcWrite(0,128);
+			input = "";
+		}
 	}
-	for (size_t i = 128; i > 0; i--){
-		  ledcWrite(0,i);
-		  delayMicroseconds(10);
-	}
-	delay(20);
-  
 }
