@@ -14,3 +14,5 @@
 =======
 */node_modules/*
 >>>>>>> 3b7bb1c97e3e66265983ecad4ad93cfb49a6029a
+sw/ESP32_Streamer/src/WiFiCredentials.h
+sw/ESP32_Streamer/server/adc.raw

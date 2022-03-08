@@ -54,6 +54,26 @@ void adcWriterTask(void *param){
 	}
 }
 
+// Task to handle generator
+void generator(void *param){
+	// setup generator
+	ledcSetup(0,40000, 8);
+	ledcAttachPin(27, 0);
+	ledcWrite(0,128);
+
+
+	for (size_t i = 0; i < 10000; i+=100){
+		ledcWriteTone(0, 40000 - i);
+		delay(100);
+	}
+
+	ledcWrite(0,0);
+	ledcWriteTone(0, 120000);
+
+	while (true){
+	}
+}
+
 void setup(){
 	Serial.begin(115200);
 	Serial.println("");
@@ -87,11 +107,11 @@ void setup(){
 	xTaskCreatePinnedToCore(adcWriterTask, "ADC Writer Task", 4096, adcSampler, 1, &adcWriterTaskHandle, 1);
 
 	// setup generator
-	ledcSetup(0,40000, 8);
-	ledcAttachPin(27, 0);
-	ledcWrite(0,128);
+	TaskHandle_t generatorTaskHandle;
+	xTaskCreatePinnedToCore(generator, "generator", 4069, NULL, 1, &generatorTaskHandle, 0);
+	
 }
 
 void loop(){
-//	 nothing to do here - everything is taken care of by tasks
+	//	 nothing to do here - everything is taken care of by tasks
 }
