@@ -8,5 +8,9 @@
 */*.out
 */*.synctex.gz
 
+<<<<<<< HEAD
 */node_modules/*
 */package-lock.json
+=======
+*/node_modules/*
+>>>>>>> 3b7bb1c97e3e66265983ecad4ad93cfb49a6029a
